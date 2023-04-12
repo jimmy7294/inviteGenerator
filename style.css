@@ -1,11 +1,27 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -31,6 +47,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
+  width: 100%;
 }
 
 button:hover {
@@ -39,8 +56,12 @@ button:hover {
 
 #message-container {
   margin-top: 20px;
-  max-width: 400px;
   margin: 0 auto;
+}
+
+#time, #place {
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* the button when pressed should display some signal that the user should be waiting */
@@ -48,4 +69,31 @@ button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* style the science fact with id = "science-fact"*/
+#science-fact {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: #3e8e41;
 }

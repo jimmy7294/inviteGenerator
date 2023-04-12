@@ -2,43 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invitation Message Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form id="message-form">
-      <label for="name-input">Long time no see:</label>
-      <input type="text" id="name-input" name="name" placeholder="sunshine"/>
+    <div class="container">
+      <p id="science-fact"></p>
+      <form id="message-form">
+        <label for="name-input">Long time no see:</label>
+        <input type="text" id="name-input" name="name" placeholder="Sunshine" required title="Please enter your name." />
+        <label for="actor-input">Your favorite person/character:</label>
+        <input type="text" id="actor-input" name="actor" placeholder="Captain America - Avengers, assemble!" required title="Please enter your favorite person or character." />
 
-      <label for="actor-input">Your favorite person/character:</label>
-      <input type="text" id="actor-input" name="actor" placeholder="Donald Trump in an interview of Fox News"/> 
+        <label for="language-select">Language:</label>
+        <select id="language-select" name="language">
+          <option value="English">English</option>
+          <option value="Finnish">Finnish</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Bengali">Bengali</option>
+          <option value="Mewmew">Mewmew</option>
+          <option value="Doge">Doge</option>
+        </select>
 
-      <label for="language-select">Language:</label>
-      <select id="language-select" name="language">
-        <option value="English">English</option>
-        <option value="Finnish">Finnish</option>
-        <option value="Vietnamese">Vietnamese</option>
-        <option value="Bengali">Bengali</option>
-        <option value="Mewmew">Mewmew</option>
-        <option value="Doge">Doge</option>
-      </select>
+        <button type="submit">Generate Message</button>
+      </form>
 
-      <button type="submit">Generate Message</button>
-    </form>
+      <div id="message-container"></div>
 
-    <div id="message-container"></div>
-
-    <div id="time">
-        <label for="time-input">Time: Sunday 23rd of April - 18:00</label>
+      <div id="time">
+          <label for="time-input">Time: Sunday 23rd of April - 18:00</label>
+      </div>
+      <!-- show the place of the meeting -->
+      <div id="place">
+          <label for="place-input">Location</label>
+          <!-- add a button contains a link to a google map place -->
+          <button type="button" onclick=window.location.href="https://www.google.com/maps/place/Kilpolanpolku+3,+00940+Helsinki,+Finland/@60.2397103,25.0873004,20z/data=!4m6!3m5!1s0x469208b102ceec6b:0x315ca510c7bb91f8!8m2!3d60.2397043!4d25.0874602!16s%2Fg%2F11dznq1w8l">Google Map</button>
+      </div>
     </div>
-    <!-- show the place of the meeting -->
-    <div id="place">
-        <label for="place-input">Location</label>
-        <!-- add a button contains a link to a google map place -->
-        <button type="button" onclick=window.location.href="https://www.google.com/maps/place/Kilpolanpolku+3,+00940+Helsinki,+Finland/@60.2397103,25.0873004,20z/data=!4m6!3m5!1s0x469208b102ceec6b:0x315ca510c7bb91f8!8m2!3d60.2397043!4d25.0874602!16s%2Fg%2F11dznq1w8l">Google Map</button>
-    </div>
-
-
     <script type="module" src="main.js"></script>
   </body>
 </html>
