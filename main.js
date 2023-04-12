@@ -24,10 +24,7 @@ form.addEventListener("submit", async (event) => {
   const message = {
     role: "user",
     content: `Craft a funny message to ${name} as a character of ${actor} (anything even fictional character) inviting ${name} to a get-together night because you have not seen them for a long time and they are missed. 
-    The message needs to be written in ${language} and encapsulates the character the more the better.
-    Example:
-    name=Jim, actor=Donald Trump, language=English
-    "Hello there, Jim! It's been a tremendous amount of time since we last crossed paths. Believe me, everyone's been talking about how much they miss your company. So, I, Donald J. Trump, cordially invite you to an evening of tremendous entertainment and luxurious indulgence. We'll have the best champagne, the best caviar, and the best chocolate cake you've ever tasted. And don't worry, we'll make sure to build a wall around the party so that only the very best people can attend. So, what do you say, Jim? Are you ready to make this party great again?"`,
+    The message needs to be written in ${language} encapsulates the character, the more the better.`,
   };
 
   const apiKey = "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";
@@ -41,7 +38,7 @@ form.addEventListener("submit", async (event) => {
       model: "gpt-3.5-turbo",
       messages: [message],
       temperature: 1,
-      max_tokens: 150,
+      max_tokens: 200,
     }),
   });
   const result = await response.json();
